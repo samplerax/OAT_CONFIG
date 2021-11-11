@@ -27,13 +27,13 @@ if  (isport) == ("n"):
     serialport = input("What port OAT is using?: ")
     print("COM port set to " + serialport)
     print("Disabling #DTR for " + serialport)
-    #os.system('stty -F ' + serialport + ' -hupcl')
+    os.system('stty -F ' + serialport + ' -hupcl')
         
 else:
     print("COM port set to /dev/ttyUSB0")
     print("Disabling #DTR for /dev/ttyUSB0")
     serialport = "/dev/ttyUSB0"
-    #os.system('stty -F /dev/ttyUSB0 -hupcl')
+    os.system('stty -F /dev/ttyUSB0 -hupcl')
 
 
 #////////////////////////////////////
